@@ -1,0 +1,6 @@
+21:20:56.320 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save part 'word/settings.xml'
+21:20:56.350 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save content types part
+21:20:56.352 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save package relationships
+21:20:56.355 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save part 'docProps/app.xml'
+21:20:56.356 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save part 'docProps/core.xml'
+21:20:56.359 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save part 'xl/sharedStrings.xml'
