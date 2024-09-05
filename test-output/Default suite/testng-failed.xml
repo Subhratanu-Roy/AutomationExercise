@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.TC_Register2">
+      <class name="testcases.TC_Cart">
         <methods>
-          <include name="setUp"/>
+          <include name="cartPageTest" invocation-numbers="0"/>
           <include name="afterSuite"/>
-          <include name="updateTestResult"/>
-          <include name="new_user_registration_Test" invocation-numbers="0 1"/>
+          <include name="teardown"/>
+          <include name="setUp"/>
           <include name="init"/>
-          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- testcases.TC_Register2 -->
+      </class> <!-- testcases.TC_Cart -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

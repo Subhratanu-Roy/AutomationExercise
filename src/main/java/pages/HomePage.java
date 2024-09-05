@@ -27,6 +27,9 @@ public class HomePage extends Base {
 	
 	@FindBy(xpath = "//a[@href='/products']")
 	WebElement products;
+	
+	@FindBy(xpath = "(//a[@href = '/view_cart'])[1]")
+	private WebElement cart;
 
 	public String getHeading() {
 		return heading.getText();
@@ -50,5 +53,10 @@ public class HomePage extends Base {
 	public ProductPage clickOnProducts() {
 		PageFunctions.clickOnElement(getDriver(),products);
 		return new ProductPage();
+	}
+	
+	public CartPage clickOnCart() {
+		PageFunctions.clickOnElement(getDriver(), cart);
+		return new CartPage();
 	}
 }

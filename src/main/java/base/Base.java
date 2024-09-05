@@ -24,17 +24,17 @@ public class Base {
 	public static Log log = new Log();
 	public static ExcelLibrary excelLibrary;
 
-	@BeforeSuite
+	@BeforeSuite // initialize all the required excel files for the tests
 	public void init() throws IOException {
 
 		prop = new Properties();
 		String propPath = System.getProperty("user.dir") + "\\resources\\Globaldata.properties";
 		FileInputStream fis = new FileInputStream(new File(propPath));
 		prop.load(fis);
-		excelLibrary = new ExcelLibrary(prop.getProperty("testdataPath"));
-		
+		excelLibrary = new ExcelLibrary(System.getProperty("user.dir") + "\\resources\\Testdata.xlsx");
 
 	}
+
 	public WebDriver getDriver() {
 		return driver.get();
 	}
@@ -59,7 +59,7 @@ public class Base {
 		getDriver().manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 	}
 
-	@AfterSuite
+	@AfterSuite // close the current browser
 	public void afterSuite() {
 		getDriver().close();
 	}

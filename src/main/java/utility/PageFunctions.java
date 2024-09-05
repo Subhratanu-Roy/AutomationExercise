@@ -5,7 +5,6 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -186,6 +185,10 @@ public class PageFunctions extends Base {
 				fos.flush();
 				fos.close();
 				doc.close();
+				for (String f : flist) {
+					File f1 = new File(directory+"\\"+f);
+					f1.delete();
+				}
 
 			}
 		} catch (Exception e) {

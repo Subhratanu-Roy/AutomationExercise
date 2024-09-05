@@ -41,5 +41,19 @@ public class DataProviders extends Base{
 		return names;
 
 	}
+	
+	@DataProvider(name = "cartpage")
+	public String[] getCartTCName() {
+		int rowno = excelLibrary.getTotalNoOfRows("Cart Testdata");
+		String[] tcnames = new String[rowno-1];
+	
+		for (int i = 2; i <= rowno; i++) {
+			tcnames[i-2] = excelLibrary.getCellData("Cart Testdata", i, "TC Name");
+		}
+		return tcnames;
+		
+			
+	}
+
 
 }
